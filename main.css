@@ -1,0 +1,117 @@
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+body{
+
+    font-family: "montseratt", sans-serif;
+    
+    background-image: url("bubbles.jpg");
+    
+    background-size: cover;
+   
+    background-position: top center;
+
+}
+.app-wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(205, 205, 205, 0.9),rgba(142, 142, 142, 0.9));
+   
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8vh 8vh 4vh;
+}
+
+.newIcon {
+    width: 110px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+
+header input :focus{
+    background-color: rgba(255,255,255, 0.6);
+}
+
+main{
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.location .city{
+    color: #000000;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.location .date {
+    color: #000000;
+    font-size: 16px;
+}
+
+.current .temp {
+    color: #000000; 
+    font-size: 10vh;
+    font-weight:900; 
+    margin: 30px 0px;
+    
+}
+
+.current .temp .span {
+    font-weight: 500;
+}
+
+.current .hi-low  { 
+    color: #000000; 
+    font-size: 24px;
+    font-weight: 500;
+    
+
+}
+
+.btn {
+    color: #ffffff;
+    background-color:#385566 ;
+    opacity: 0.9;
+    height: 6vh;
+    text-align: center;
+    text-justify: center;
+    border-radius: 16px 16px 16px 16px;
+    border: none;
+    margin-left:1vh ;
+    
+}
+.form-control{
+    width: 100%;
+    max-width:40vh;
+    padding:2vh 3vh;
+    border: none;
+    outline: none;
+    background-color: rgba(232, 232, 232, 0.9);
+    border-radius: 16px 16px 16px 16px;
+    border: 1px solid #385566;
+    color: #313131;
+    font-size:17px;
+    font-weight: 300;
+    transition: 0.2 ease-out;
+}
+.icon{
+    width: 20vh;
+    height: 20vh;
+}
+
+
