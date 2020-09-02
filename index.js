@@ -1,7 +1,7 @@
 //My API key and URL
 const api = {
-    key: "a6da713e87b7884950660593bc2eed8d",
-    url: "https://api.openweathermap.org/data/2.5/"
+  key: "a6da713e87b7884950660593bc2eed8d",
+  url: "https://api.openweathermap.org/data/2.5/"
 }
 
 //SearchBox
@@ -13,22 +13,22 @@ function displayWeatherButton() {
 }
 
 //Get result from the API
-function getResults (query) {
+function getResults(query) {
   let response = fetch(`${api.url}weather?q=${query}&units=metric&APPID=${api.key}`)
     .then(weather => {
       return weather.json();
     }).then(displayResults);
 
-  if(response.ok) {
-      return response.json();
+  if (response.ok) {
+    return response.json();
   }
   else {
-      throw new Error("Could not fetch data.");
+    throw new Error("Could not fetch data.");
   }
-} 
+}
 
-//display the result from user input
-function displayResults (weather) {
+//display the API result from user input
+function displayResults(weather) {
   let Town = document.querySelector('.location .city');
   Town.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -40,7 +40,7 @@ function displayResults (weather) {
   temperature.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
 
   var iconCode = weather.weather[0].icon;
-  var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png"; 
+  var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
   $(".icon").html("<img class = 'newIcon' src=" + iconUrl + ">");
 
   let highAndLow = document.querySelector('.hi-low');
@@ -48,7 +48,7 @@ function displayResults (weather) {
 }
 
 //Data for Date
-function dateBuilder (d) {
+function dateBuilder(d) {
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
