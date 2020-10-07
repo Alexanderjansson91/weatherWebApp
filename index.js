@@ -1,7 +1,7 @@
 //My API key and URL
 const api = {
-  key: "a6da713e87b7884950660593bc2eed8d",
-  url: "https://api.openweathermap.org/data/2.5/"
+  key: "",
+  url: ""
 }
 
 //SearchBox
